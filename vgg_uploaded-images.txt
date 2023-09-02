@@ -1,0 +1,78 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     cow_01.jpg  label:                        cow
+ 2 key:                     Dog_02.png  label:                        dog
+ 3 key:                     Dog_01.jpg  label:                        dog
+ 4 key:                     hat_01.jpg  label:                        hat
+
+     MATCH:
+
+                    hat_01.jpg: 
+Real:                        hat   Classifier:     cowboy hat, ten-gallon hat
+
+ NOT A MATCH:
+
+                    cow_01.jpg: 
+Real:                        cow   Classifier:                             ox
+
+                    Dog_02.png: 
+Real:                        dog   Classifier:         welsh springer spaniel
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:         welsh springer spaniel
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+     MATCH:
+
+                    hat_01.jpg: 
+Real:                        hat   Classifier:     cowboy hat, ten-gallon hat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    cow_01.jpg: 
+Real:                        cow   Classifier:                             ox  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_02.png: 
+Real:                        dog   Classifier:         welsh springer spaniel  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:         welsh springer spaniel  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+
+
+*** Percentages Summary for CNN Model Architecture VGG ***
+pct_match           : 25.00
+pct_correct_dogs    : 100.00
+pct_correct_breed   : 0.00
+pct_correct_notdogs : 100.00
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:         welsh springer spaniel
+Real:                        dog   Classifier:         welsh springer spaniel
+
+** Total Elapsed Runtime: 0:0:8
